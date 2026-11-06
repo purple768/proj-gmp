@@ -1,0 +1,169 @@
+:root {
+  --gmp-primary: #165dff;
+  --gmp-primary-light: #e8f0ff;
+  --gmp-text: #1d2129;
+  --gmp-text-2: #4e5969;
+  --gmp-text-3: #86909c;
+  --gmp-border: #e5e6eb;
+  --gmp-bg: #f5f7fa;
+  --gmp-card: #ffffff;
+  --gmp-danger: #f53f3f;
+  --gmp-warning: #ff7d00;
+  --gmp-success: #00b42a;
+  --el-color-primary: #165dff;
+  --el-border-radius-base: 6px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  color: var(--gmp-text);
+  background: var(--gmp-bg);
+}
+
+a {
+  color: var(--gmp-primary);
+  text-decoration: none;
+}
+
+.page {
+  padding: 16px;
+}
+
+.card {
+  background: var(--gmp-card);
+  border-radius: 8px;
+  border: 1px solid var(--gmp-border);
+  padding: 16px;
+}
+
+.card + .card {
+  margin-top: 12px;
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin: 0 0 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.muted {
+  color: var(--gmp-text-3);
+}
+
+.mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.toolbar {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.toolbar .spacer {
+  flex: 1;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stat {
+  background: #fff;
+  border: 1px solid var(--gmp-border);
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.stat .label {
+  color: var(--gmp-text-3);
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.stat .value {
+  font-size: 26px;
+  font-weight: 500;
+  margin-top: 6px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat .unit {
+  font-size: 13px;
+  color: var(--gmp-text-3);
+  margin-left: 4px;
+  font-weight: 400;
+}
+
+.required::before {
+  content: '*';
+  color: var(--gmp-danger);
+  margin-right: 2px;
+}
+
+.text-danger {
+  color: var(--gmp-danger);
+}
+
+.text-warning {
+  color: var(--gmp-warning);
+}
+
+.text-success {
+  color: var(--gmp-success);
+}
+
+.empty {
+  padding: 40px;
+  text-align: center;
+  color: var(--gmp-text-3);
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+@media (max-width: 1200px) {
+  .stat-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

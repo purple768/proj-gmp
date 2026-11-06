@@ -1,0 +1,23 @@
+# 统一换行与二进制识别，避免 Windows/Linux 间出现无意义的整文件 diff
+* text=auto
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.zip binary
+*.xlsx binary
+*.xls binary
+*.pdf binary
+
+*.sh   text eol=lf
+*.mjs  text eol=lf
+*.ts   text eol=lf
+*.vue  text eol=lf
+*.md   text eol=lf
+*.json text eol=lf
